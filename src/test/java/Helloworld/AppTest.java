@@ -2,11 +2,20 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 public class AppTest
 {
-	String msg="hello world";
-	HelloWorld h=new HelloWorld();
-	public void testPrint()
+	//String msg="hello world";
+	//HelloWorld h=new HelloWorld();
+	public void test1()
 	{
-		assertEquals(msg,h.sayHello());
+		HelloWorld.sayHello(null);
+		
+	}
+	public void test2()
+	{
+		HelloWorld.sayHello("");
+	}
+	public void test3()
+	{
+		HelloWorld.sayHello("hello world");
 		
 	}
 }
