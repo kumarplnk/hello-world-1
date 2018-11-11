@@ -1,25 +1,16 @@
+
 class HelloWorld
 {
 	
-	public String sayHello(String msg)
+	public String sayHello(String msg) throws IllegalArgumentException
 	{
 		if(msg==null || msg.isEmpty())
 		{
-			try{
-				throw new Exception("sayHello cant take an empty or null string");
-			}catch(Exception e)
-			{
-				System.out.print(e);
-				String emsg=e.getMessage();
-				return emsg;
-				
-			}
+			throw new IllegalArgumentException("msg cant be null or empty");
 		}
-		else
-		{
+		
 			System.out.print(msg);
 			return msg;
-		}
 		
 	}
 	
