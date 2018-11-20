@@ -1,12 +1,14 @@
 class HelloWorld
 {
+	String val="hello world ";
 	public String sayHello(String msg) throws IllegalArgumentException
 	{
 		if(msg==null || msg.isEmpty()||msg.trim().isEmpty())
 		{
-			throw new IllegalArgumentException("msg cant be null or empty");
+			throw new IllegalArgumentException("Argument cant be null or empty");
 		}
-			System.out.println(msg);
-			return msg;
+			val+=msg;
+			System.out.println(val);
+			return val;
 	}
 }

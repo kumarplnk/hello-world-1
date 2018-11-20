@@ -4,30 +4,30 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 public class HelloWorldTest
 {
-	String s="hello  world";
+	private static final String s="java";
 	HelloWorld h=new HelloWorld();
 	@Test
-	public void test1()
+	public void testsayHelloWhenInputParamIsString()
 	{
-		assertEquals(s,h.sayHello(s));
+		assertEquals("hello world java",h.sayHello(s));
 	}
 	//passing null string
 	@Test(expected=IllegalArgumentException.class)
-	public void test2()
+	public void testsayHelloWhenInputParamIsNull()
 	{
 		h.sayHello(null);
 	}
 	//passing empty string
 	@Test(expected=IllegalArgumentException.class)
-	public void test3()
+	public void testsayHelloWhenInputParamIsEmptyString()
 	{
 		h.sayHello("");
 	}
 	//passing White spacess
 	@Test(expected=IllegalArgumentException.class)
-	public void test4()
+	public void testsayHelloWhenInputParamIsWhiteSpaces()
 	{
-		h.sayHello("             ");
+		h.sayHello("        ");
 	}
 	
 }
