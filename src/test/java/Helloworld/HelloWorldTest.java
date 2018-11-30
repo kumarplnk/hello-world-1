@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 public class HelloWorldTest
 {
-	private static final String TEST_STR="java";
+	static final String TEST_STR="java";
 	HelloWorld classUnderTest=new HelloWorld();
 	@Test
 	public void testsayHelloWhenInputParamIsString()
